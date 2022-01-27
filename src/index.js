@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-app = express()
-    app.use(express.static('TextUtils-React/build'));
-    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'TextUtils-React', 'build', 'index.html')));
+// app = express()
+//     app.use(express.static('TextUtils-React/build'));
+//     app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'TextUtils-React', 'build', 'index.html')));
 ReactDOM.render(
   <React.StrictMode>
     <App />

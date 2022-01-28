@@ -12,6 +12,7 @@ import {
 
  
 function App() {
+  const[data,newdata]=useState("Enable Darkmode")
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
   const [alert, setAlert] = useState(null);
 
@@ -30,17 +31,19 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "success");
+      newdata("Enable Lightmode");
     }
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
+      newdata("Enable Darkmode");
     }
   }
   return (
     <Router>
     <>
-    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
+    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()}  data={data}/>
     <Alert alert={alert}/>
     <div className="container my-3">
     <Switch>
